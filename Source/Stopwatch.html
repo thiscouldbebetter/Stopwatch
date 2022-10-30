@@ -1,20 +1,24 @@
 <html>
-<body>
+
+<body onkeydown="UiEventHandler.body_KeyDown(event)">
 
 <div id="divUi">
 	<h3>Stopwatch</h3>
 
-	<p>Click the buttons to start, stop, split (record time without stopping), and reset the stopwatch.</p>
+	<p>Click the buttons or the indicated hotkeys to start, stop, split (record time without stopping), and reset the stopwatch.</p>
 
-	<button onmousedown="UiEventHandler.buttonStartStop_Clicked();">Start/Stop</button>
-	<button onmousedown="UiEventHandler.buttonSplit_Clicked();">Split</button>
-	<button onmousedown="UiEventHandler.buttonReset_Clicked();">Reset</button>
+	<button onmousedown="UiEventHandler.buttonStartStop_Clicked();">Start/Stop (Enter/Space)</button>
+	<br />
+	<button onmousedown="UiEventHandler.buttonSplit_Clicked();">Split ("/")</button>
+	<br />
+	<button onmousedown="UiEventHandler.buttonReset_Clicked();">Reset ("Delete")</button>
 	<br />
 
 	<label>Time Running Since Last Reset:</label>
 	<div id="divStopwatch"></div>
 
 </div>
+
 
 <script type="text/javascript" src="PlatformDom.js"></script>
 <script type="text/javascript" src="Stopwatch.js"></script>
